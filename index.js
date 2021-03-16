@@ -26,7 +26,7 @@ program
     console.log({ id, title, url, genres, score });
 
     if (images) {
-      const { screenshots, ipadScreenshots, icon } = metadata;
+      const { screenshots = [], ipadScreenshots = [], icon } = metadata;
 
       const outPath = path.join(__dirname, "images", id);
       fs.mkdirSync(outPath, { recursive: true });
@@ -36,7 +36,11 @@ program
           const { pathname } = new URL(url);
           const [fileUUID] = pathname
             .split("/")
-            .filter((fragment) => fragment.includes(".jpg"));
+            .filter(
+              (fragment) =>
+                fragment.includes(".jpg") || fragment.includes(".png")
+            );
+
           const fileStream = fs.createWriteStream(
             path.join(outPath, fileUUID),
             {
