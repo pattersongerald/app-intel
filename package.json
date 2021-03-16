@@ -1,0 +1,23 @@
+{
+  "name": "app-intel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pattersongerald/app-intel.git"
+  },
+  "author": "Gerald Patterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pattersongerald/app-intel/issues"
+  },
+  "homepage": "https://github.com/pattersongerald/app-intel#readme",
+  "dependencies": {
+    "app-store-scraper": "^0.16.3",
+    "commander": "^7.1.0"
+  }
+}
